@@ -25,7 +25,6 @@ const TaskCard = ({ task, index }: TaskCardProps) => {
                         <Card.Title>{task.title}</Card.Title>
                         <Card.Text>{task.description}</Card.Text>
                         <Card.Subtitle className="text-muted">Atanan {task.assignee}</Card.Subtitle>
-
                     </Card.Body>
 
                 </Card>

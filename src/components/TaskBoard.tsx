@@ -9,7 +9,6 @@ interface TaskBoardProps {
     setTasks: React.Dispatch<React.SetStateAction<Task[]>>
 }
 
-
 const TaskBoard = ({ tasks, setTasks }: TaskBoardProps) => {
 
     const statuses: Task["status"][] = ["Todo", "In Progress", "Done"];
@@ -25,11 +24,10 @@ const TaskBoard = ({ tasks, setTasks }: TaskBoardProps) => {
 
         const updatedTask: Task = {
             ...draggedTask,
-            status: destination.droppableId as Task["status"]
+            status: destination.droppableId as Task["status"],
         }
 
         const newTasks = tasks.filter((task) => task.id !== draggableId)
-
 
         const destinationTasks = newTasks.filter((task) => task.status === destination.droppableId)
 
@@ -56,7 +54,6 @@ const TaskBoard = ({ tasks, setTasks }: TaskBoardProps) => {
 
         newTasks.splice(insertAt, 0, updatedTask)
         setTasks(newTasks)
-
 
     };
 
