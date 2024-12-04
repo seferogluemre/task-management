@@ -18,7 +18,7 @@ const TaskColumn = ({ status, tasks }: TaskColumnProps) => {
                     <div ref={provided.innerRef} {...provided.droppableProps} style={{
                         minHeight: "500px",
                         padding: "10px",
-                        background: snapshot.isDraggingOver ? "#e9ecef" : "#c6c9cc"
+                        background: snapshot.isDraggingOver ? "#ccd5df" : "#e3e3e4"
                     }} >
                         {
                             tasks.map((task, index) => (
